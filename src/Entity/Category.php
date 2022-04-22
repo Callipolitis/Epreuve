@@ -80,4 +80,12 @@ class Category
 
         return $this;
     }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function __toString()
+    {
+        return $this->getName();
+    }
 }

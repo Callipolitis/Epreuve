@@ -21,7 +21,11 @@
                 <td>{{ article.id }}</td>
                 <td>{{ article.titre }}</td>
                 <td>{{ article.contenu }}</td>
-                <td>{{ article.category }}</td>
+                <td>
+                    {% if article.category.name is defined %}
+                    {{ article.category.name }}
+                    {% endif %}
+                </td>
                 <td>
                     <a href="{{ path('app_article_show', {'id': article.id}) }}">show</a>
                     <a href="{{ path('app_article_edit', {'id': article.id}) }}">edit</a>
