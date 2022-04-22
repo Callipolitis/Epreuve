@@ -19,6 +19,14 @@
                 <th>Contenu</th>
                 <td>{{ article.contenu }}</td>
             </tr>
+            <tr>
+                <th>Categorie</th>
+                <td>
+                    {% if article.category.name is defined %}
+                    {{ article.category.name }}
+                    {% endif %}
+                </td>
+            </tr>
         </tbody>
     </table>
 
