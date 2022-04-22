@@ -23,6 +23,8 @@ class AppFixtures extends Fixture
         $categorie_n3->setName('Type3');
         $manager->persist($categorie_n3);
 
+        $manager->flush();
+
         $article = new Article();
         $article->setTitre("Article 1");
         $article->setContenu("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut viverra urna in nunc dapibus tincidunt et eu magna. Pellentesque venenatis varius orci sit amet condimentum. Quisque sit amet enim id nisl consectetur gravida. Curabitur efficitur felis rutrum ligula convallis convallis. Vestibulum eget dictum lorem. Vestibulum est justo, fermentum eu eleifend vestibulum, lacinia efficitur erat. Proin a ligula lorem. In iaculis dignissim sodales.");
